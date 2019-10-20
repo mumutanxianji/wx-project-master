@@ -1,0 +1,42 @@
+server:
+  port: 8081
+  servlet:
+    context-path:  /wx-project
+
+#数据库相关信息
+#spring:
+#  application:
+#    name: wx-project
+#  datasource:
+#    url: jdbc:mysql://127.0.0.1:3306/wx_project?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useCursorFetch=true&defaultFetchSize=100
+#    username: root
+#    password: 517933964
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    validation-query: SELECT 1
+#    test-on-borrow: true
+#    test-while-idle: true
+#    min-idle: 1
+#    max-idle: 5
+#    max-active: 100
+#DataSource
+#数据库驱动
+jdbc:
+  driver: com.mysql.jdbc.Driver
+#数据库链接
+  url: jdbc:mysql://localhost:3306/wx_project?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+#数据库用户名
+  username: root
+#数据库密码
+  password: 517933964
+
+#Mybatis
+mybatis_config_file: mybatis-config.xml
+mapper_path: /mapper/**.xml
+type_alias_package: com.example.demo.entity
+
+#控制台打印执行过的sql语句
+logging:
+    level:
+      com.example.demo.dao: debug
+
+
